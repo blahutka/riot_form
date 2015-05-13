@@ -1,1 +1,4 @@
-require("stylesheets/application.css")
+require("stylesheets/application")
+
+console.log 'ok'
+

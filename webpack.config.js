@@ -7,12 +7,14 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    cache: true,
-    entry: './app/javascripts/application.coffee',
+
+    entry: {
+        app: ['./app/javascripts/application.coffee']
+    },
 
   output: {
-      path: './public/assets/',
-      publicPath: './public/assets/',
+      path: './public/assets',
+      publicPath: '/assets/',
     filename: 'bundle.js'
   },
   resolve: {
@@ -26,7 +28,7 @@ module.exports = {
     loaders: [
         {test: /\.html$/, include: /src/, loader: 'riotjs'},
         {test: /\.coffee$/, loader: 'coffee-loader'},
-        {test: /\.scss|.css$/, loader: ExtractTextPlugin.extract("css?sourceMap!sass?sourceMap&outputStyle=expanded")}
+        {test: /\.scss|.css$/, loader: ExtractTextPlugin.extract("css!sass")}
 
     ]
   },
@@ -36,9 +38,8 @@ module.exports = {
       new ExtractTextPlugin('styles.css')
   ],
   devServer: {
-      port: 3001,
-      hot: true,
-      inline: true
+      //port: 3001
+      contentBase: 'public/'
   },
   devtool: "source-map"
 
