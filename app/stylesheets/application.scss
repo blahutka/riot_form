@@ -1,7 +1,11 @@
-body {
-    color: blue;
-}
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,latin-ext);
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
-h1 {
-    font-size: 50px;
-    }
+@import "./orders/form";
+
+
+body {
+  background-color:#E9EBE2;
+  }
+

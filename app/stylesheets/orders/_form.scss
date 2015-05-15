@@ -1,0 +1,49 @@
+.panel {
+  background-color:#FBFBF9;
+  border-width:2px;
+
+  .panel-heading {
+    text-align:center;
+    font-size:36px;
+    color:#6f6f6f;
+    font-family:"Open Sans", sans-serif;
+    font-weight:300;
+    }
+
+  .panel-body {
+    select {
+      -moz-appearance:none;
+      -webkit-appearance:none;
+      appearance:none;
+      }
+
+    .select {
+      &:hover {
+        i {
+          color:#333333;
+          }
+        }
+      i {
+        color:#aaaaaa;
+        height:11px;
+        pointer-events:none;
+        position:absolute;
+        right:30px;
+        top:18px;
+        //width:5px;
+        }
+      }
+    }
+
+  .btn {
+    font-size: 20px;
+
+    .caret-right {
+      border-left:8px solid #fff;
+      border-bottom:6px solid transparent;
+      border-top:6px solid transparent;
+      border-right:6px solid transparent;
+      margin-left:5px;
+      }
+    }
+  }

@@ -1,4 +1,10 @@
-require("stylesheets/application")
+require("stylesheets/application.scss")
 
-console.log 'ok'
+
+require('./app.tag')
+
+
+riot.mount('*')
+
+
 
